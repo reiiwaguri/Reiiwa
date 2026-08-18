@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0f19">
+<title>Sisi Otaku</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">Sisi<span>Otaku</span></a>
+  <nav>
+    <a href="#berita">Berita</a>
+    <a href="#jadwal">Jadwal</a>
+    <a href="admin/">Owner</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <p class="eyebrow">ANIME NEWS</p>
+    <h1>Berita anime,<br><span>tanpa ribet.</span></h1>
+    <p>Portal anime untuk berita terbaru, manga, dan jadwal tayang.</p>
+    <a class="button" href="#berita">Lihat berita</a>
+  </div>
+</section>
+
+<section id="berita" class="section">
+  <div class="section-title"><h2>Berita Terbaru</h2><button id="refreshNews" class="ghost">Refresh</button></div>
+  <div id="newsGrid" class="grid"><div class="loading">Memuat berita...</div></div>
+</section>
+
+<section id="jadwal" class="section">
+  <div class="section-title"><h2>Jadwal Anime</h2><button id="loadSchedule" class="ghost">Muat jadwal</button></div>
+  <div id="scheduleGrid" class="schedule"><div class="empty">Tekan “Muat jadwal” untuk melihat jadwal anime.</div></div>
+</section>
+</main>
+
+<footer>© 2026 Sisi Otaku</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
