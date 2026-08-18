@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Owner - Sisi Otaku</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="../">Sisi<span>Otaku</span></a><button id="logout" class="ghost">Logout</button></header>
+
+<main class="admin-wrap">
+<section id="loginBox" class="panel">
+<h1>Owner Login</h1>
+<p>Masuk menggunakan akun owner Supabase.</p>
+<form id="loginForm">
+<input id="email" type="email" placeholder="Email" required>
+<input id="password" type="password" placeholder="Password" required>
+<button class="button" type="submit">Masuk</button>
+</form>
+<p id="loginMsg" class="error"></p>
+</section>
+
+<section id="dashboard" hidden>
+<div class="section-title"><div><p class="eyebrow">OWNER PANEL</p><h1>Dashboard</h1></div><button id="newBtn" class="button">+ Berita Baru</button></div>
+
+<div class="stats"><div><b id="countNews">0</b><span>Berita</span></div><div><b>7</b><span>Hari jadwal</span></div></div>
+
+<div class="panel">
+<h2>Berita</h2>
+<div id="adminNews"></div>
+</div>
+
+<div id="editor" class="panel" hidden>
+<h2 id="editorTitle">Berita Baru</h2>
+<form id="newsForm">
+<input id="newsId" type="hidden">
+<label>Judul<input id="title" required></label>
+<label>Ringkasan<textarea id="excerpt" rows="3"></textarea></label>
+<label>Isi berita<textarea id="content" rows="8"></textarea></label>
+<label>Gambar<input id="image" type="file" accept="image/*"></label>
+<img id="preview" class="preview" hidden>
+<label>Tanggal terbit<input id="publishedAt" type="datetime-local" required></label>
+<div class="actions"><button class="button" type="submit">Simpan</button><button id="cancelBtn" class="ghost" type="button">Batal</button></div>
+<p id="formMsg"></p>
+</form>
+</div>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
